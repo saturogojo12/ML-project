@@ -14,10 +14,10 @@ def get_requirements(file_path:str)->List[str]:
             requirements.remove(HYPEN_E_DOT)
     return requirements
 setup(
-    name='mlproject1',
+    name='ML PROJECT',
     version='0.0.1',
     author='Saransh',
-    author_email='saransh.sharma1202@gmail.com',
+    author_email='saranshs23@iitk.ac.in',
     packages=find_packages(),
     install_requires=get_requirements('requirements.txt')
 
