@@ -3,6 +3,8 @@ import sys
 import numpy as np
 import pandas as pd
 import dill
+sys.path.insert(0,'D:\\ML project')
+
 from src.exception import CustomException
 from sklearn.metrics import r2_score
 
