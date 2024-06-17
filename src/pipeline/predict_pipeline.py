@@ -1,19 +1,18 @@
-import numpy as np
 import pandas as pd
 import sys
+import os
 sys.path.insert(0,'D:\\ML project')
 from src.exception import CustomException
 from src.utils import load_object
-
 class PredictPipeline:
-    def _init__(self):
+    def __init__(self):
         pass
     def predict(self,features):
         try:
-            model_path='artifacts\model.pkl'
-            preprocessor_path='artifacts\preprocessor.pkl'
-            model=load_object(file_path=model_path)
-            preprocessor=load_object(file_path=preprocessor_path)
+            model_path=os.path.join('artifacts','model.pkl')
+            preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
+            model=load_object(model_path)
+            preprocessor=load_object(preprocessor_path)
             data_scaled=preprocessor.transform(features)
             preds=model.predict(data_scaled)
             return preds
@@ -24,7 +23,7 @@ class CustomData:
     def __init__( self,
                  gender: str,
                  race_ethnicity: str,
-                 parental_level_of_education,
+                 parental_level_of_education: str,
                  lunch: str,
                  test_preparation_course: str,
                  reading_score: int,

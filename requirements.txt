@@ -6,4 +6,5 @@ catboost
 dill
 xgboost
 flask
+pickle
 -e .
