@@ -1,9 +1,9 @@
 import sys
 import pandas as pd
-import os
+sys.path.insert(0,'D:\\ML project')
 from src.exception import CustomException
 from src.utils import load_object
-
+import os
 
 class PredictPipeline:
     def __init__(self):
